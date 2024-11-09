@@ -1,0 +1,126 @@
+:root {
+    --color-fondo: url('../img/fondoposter.jpg') no-repeat center center fixed;
+    --color-overlay: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    --color-texto-poster: #ffffff;
+    --color-texto-formulario: rgba(48, 40, 40, 0.651);
+    --color-boton: #ffcc00; /* Color dorado para el botón */
+    --color-boton-hover: #e6b800; /* Color dorado oscuro en hover */
+    --color-enlace-hover: #ffcc00; /* Color dorado en hover para enlaces */
+}
+
+body {
+    height: 100vh;
+    background: var(--color-fondo);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    background: var(--color-overlay);
+    color: var(--color-texto-poster);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.contenedor h1,
+.contenedor-formulario h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contenedor-formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-formulario input {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 5px;
+    border: 1px solid var(--color-texto-formulario);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.contenedor-formulario input:focus {
+    border-color: var(--color-boton);
+    outline: none;
+}
+
+.contenedor-formulario .btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-boton);
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contenedor-formulario .btn:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.opciones-login {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 320px;
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+.opciones-login label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.contenedor a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.contenedor a:hover {
+    color: var(--color-enlace-hover);
+}
+
+.register-link {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .contenedor {
+        width: 90%;
+        max-width: 360px;
+    }
+}
